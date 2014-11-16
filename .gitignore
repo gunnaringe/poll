@@ -8,6 +8,8 @@ dependency-reduced-pom.xml
 
 **/target
 
+*.xml
+
 # Package Files #
 *.jar
 *.war
