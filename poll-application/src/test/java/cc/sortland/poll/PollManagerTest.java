@@ -46,6 +46,6 @@ public class PollManagerTest {
             pollManager.addVote(poll.id(), Vote.create("Maybe"));
         }
         pollManager.addVote(poll.id(), Vote.create("Something else"));
-        return poll;
+        return pollManager.getPoll(poll.id()).get();
     }
 }

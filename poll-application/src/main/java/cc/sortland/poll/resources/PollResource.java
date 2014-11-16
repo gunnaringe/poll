@@ -93,8 +93,8 @@ public class PollResource {
             @Context final UriInfo uriInfo,
             @PathParam("pollId") final Id id,
             final Vote vote) {
-        final Optional<Poll> poll = pollManager.deletePoll(id);
-        if (!poll.isPresent()) {
+        final boolean success = pollManager.deletePoll(id);
+        if (!success) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
         return Response.noContent().build();
